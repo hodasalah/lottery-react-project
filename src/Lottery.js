@@ -10,9 +10,9 @@ const Lottery = ({ title, maxBalls, maxNum }) => {
     <div className="lottery">
       <h2>{title}</h2>
       <div className="balls">
-        {nums.map((n, i) => (
-          <Ball key={i} num={n} />
-        ))}
+         {nums.map((n, i) => {
+          return n?<Ball key={i} num={n} />: "?"
+        })}
       </div>
       <button onClick={generate}>Generate numbers</button>
     </div>
